@@ -1,0 +1,28 @@
+<h1 class ="title">Stupid Coaching</h1>
+
+<div class="response">
+  <p><%= @answer %></p>
+
+  <p>--You</p>
+
+</div>
+
+
+<div class="response two">
+
+  <% if @answer == "I am going to work" %>
+   <p> <%= "Great!" %></p>
+  <% elsif @answer[-1] == "?" %>
+  <p> <%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+  <p> <%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+
+
+  <p>--Your Coach</p>
+
+
+</div>
+
+
+<%= link_to "Try Another question", "/ask" %>
